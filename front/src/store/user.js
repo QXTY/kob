@@ -7,6 +7,7 @@ export default {
         photo: "",
         token: "",
         is_login: false,
+        pulling_info: true,
     },
     getters: {
     },
@@ -27,6 +28,9 @@ export default {
             state.token = "";
             state.is_login = false;
         },
+        updatePullingInfo(state,pulling_info) {
+            state.pulling_info = pulling_info;
+        }
     },
     //Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象，
     //因此你可以调用 context.commit 提交一个 mutation，或者通过 context.state 
@@ -42,6 +46,7 @@ export default {
             },
             success(resp) {
                 if (resp.error_message === "success") {
+                    localStorage.setItem("jwt_token", resp.token);
                     context.commit("updateToken", resp.token);
                     data.success(resp);
                 } else {
@@ -77,7 +82,8 @@ export default {
         })
       },
       logout(context) {
-            context.commit("logout")
+        localStorage.removeItem("jwt_token");
+        context.commit("logout")
       }
     },
     modules: {

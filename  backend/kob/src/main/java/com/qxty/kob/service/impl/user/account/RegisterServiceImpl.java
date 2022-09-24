@@ -62,10 +62,10 @@ public class RegisterServiceImpl implements RegisterService {
 
         String encodedPassword = passwordEncoder.encode(password);
         String photo = "";
-        User user = new User(null, username, password, photo);
+        User user = new User(null, username, encodedPassword, photo);
         userMapper.insert(user);
 
-        map.put("message", "success");
+        map.put("error_message", "success");
         return map;
     }
 }
