@@ -1,4 +1,4 @@
-package com.qxty.kob.service.utils;
+package com.qxty.kob.service.impl.utils;
 
 import com.qxty.kob.pojo.User;
 import lombok.AllArgsConstructor;

@@ -4,7 +4,6 @@
 </template>
 
 <script>
-//ajax
 import NavBar from './components/NavBar.vue';
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.min.css'

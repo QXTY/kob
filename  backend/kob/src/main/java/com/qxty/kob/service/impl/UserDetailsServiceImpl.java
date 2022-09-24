@@ -3,7 +3,7 @@ package com.qxty.kob.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.qxty.kob.mapper.UserMapper;
 import com.qxty.kob.pojo.User;
-import com.qxty.kob.service.utils.UserDetailsImpl;
+import com.qxty.kob.service.impl.utils.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
