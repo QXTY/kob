@@ -19,8 +19,9 @@
         },
         setup() {
             const store = useStore();
-            let socket = null;
             const socketUrl = `ws://localhost:3000/websocket/${store.state.user.token}`
+            store.commit("updateLoser", "none");
+            let socket = null;
             onMounted(() => {
                 store.commit("updateOpponent", {
                     username: "我的对手",

@@ -13,6 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 public class Player {
     private Integer id;
+    private Integer botId;
+    private String botCode;
     private Integer sx;
     private Integer sy;
     private List<Integer> steps; // 每一步方向序列
